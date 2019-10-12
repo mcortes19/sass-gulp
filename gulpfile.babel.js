@@ -1,23 +1,22 @@
-import {
-  parallel,
-  watch,
-} from 'gulp';
-import {
-  scriptsPath,
-  scripts,
-} from './gulp-tasks/scripts';
-import {
-  stylesPath,
-  styles,
-} from './gulp-tasks/styles';
+import { parallel, watch } from 'gulp';
+import { scriptsPath, scripts, linter } from './gulp-tasks/scripts';
+import { stylesPath, styles } from './gulp-tasks/styles';
 
 const watchTask = () => {
-  watch(stylesPath.src, {
-    ignoreInitial: false,
-  }, styles);
-  watch(scriptsPath.src, {
-    ignoreInitial: false,
-  }, scripts);
+  watch(
+    stylesPath.src,
+    {
+      ignoreInitial: true,
+    },
+    styles
+  );
+  watch(
+    scriptsPath.src,
+    {
+      ignoreInitial: true,
+    },
+    scripts
+  );
 };
-
-export default parallel(styles, scripts, watchTask);
+export { linter as eslint, watchTask as watch, styles, scripts };
+export default parallel(styles, scripts, linter, watchTask);

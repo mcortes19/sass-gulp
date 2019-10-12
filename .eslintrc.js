@@ -3,7 +3,7 @@ module.exports = {
     "browser": true,
     "es6": true
   },
-  "extends": ["airbnb-base"],
+  "extends": ["airbnb-base", "plugin:prettier/recommended"],
   "globals": {
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
@@ -12,5 +12,5 @@ module.exports = {
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
-  "rules": {}
+  "rules": {},
 };
