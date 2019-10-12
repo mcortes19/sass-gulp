@@ -1,0 +1,37 @@
+{
+  "name": "sass-gulp",
+  "version": "1.0.0",
+  "description": "Setting up the JS and CSS build process with Gulp 4",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mcortes19/scss-gulp.git"
+  },
+  "author": "Marvin J. Cortés",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mcortes19/scss-gulp/issues"
+  },
+  "homepage": "https://github.com/mcortes19/scss-gulp#readme",
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/register": "^7.6.2",
+    "eslint": "^6.5.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.2",
+    "node-sass": "^4.12.0"
+  }
+}
