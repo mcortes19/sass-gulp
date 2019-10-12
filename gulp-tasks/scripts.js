@@ -35,8 +35,7 @@ const linter = () => {
   return src([scriptsPath.src, './gulp-tasks/**/*.js'])
     .pipe(plumber())
     .pipe(eslint())
-    .pipe(eslint.format())
-    .pipe(eslint.failAfterError());
+    .pipe(eslint.format());
 };
 
 export { scriptsPath, scripts, linter };
