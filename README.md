@@ -1,6 +1,7 @@
-# SASS-Gulp
+# Boilerplate using Sass and Gulp 4.
 
 Setting up the JS and CSS build process with Gulp 4 + Babel.
+
 The gulpfile also uses babel in order to use ES6 features to split tasks in separeted files.
 
 ## Install
@@ -14,3 +15,4 @@ The gulpfile also uses babel in order to use ES6 features to split tasks in sepa
 - Airbnb Style Guide
 - Prettier
 - Babel
+- NVM
