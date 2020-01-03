@@ -11,7 +11,7 @@ const scriptsPath = {
   dest: './dist/js/',
 };
 
-const scripts = () => {
+const scriptsCompile = () => {
   return src(scriptsPath.src, {
     sourcemaps: true,
   })
@@ -31,11 +31,11 @@ const scripts = () => {
 };
 
 // Lint scripts
-const linter = () => {
+const scriptsLinter = () => {
   return src([scriptsPath.src, './gulp-tasks/**/*.js'])
     .pipe(plumber())
     .pipe(eslint())
     .pipe(eslint.format());
 };
 
-export { scriptsPath, scripts, linter };
+export { scriptsPath, scriptsCompile, scriptsLinter };

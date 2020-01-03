@@ -6,13 +6,13 @@ import cleanCSS from 'gulp-clean-css';
 import rename from 'gulp-rename';
 import plumber from 'gulp-plumber';
 
-const stylesPath = {
+const sassPath = {
   src: './src/sass/**/*.scss',
   dest: './dist/css/',
 };
 
-const styles = () => {
-  return src(stylesPath.src, {
+const sassCompile = () => {
+  return src(sassPath.src, {
     sourcemaps: true,
   })
     .pipe(plumber())
@@ -33,10 +33,10 @@ const styles = () => {
       })
     )
     .pipe(
-      dest(stylesPath.dest, {
+      dest(sassPath.dest, {
         sourcemaps: true,
       })
     );
 };
 
-export { stylesPath, styles };
+export { sassPath, sassCompile };
